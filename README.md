@@ -83,7 +83,7 @@ def prodMain()={
 }
 
 @main
-debugMain()={
+def debugMain()={
   println("this is for debug")
 }
 
