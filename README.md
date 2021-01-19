@@ -113,3 +113,6 @@ import $ivy.{
   `foo::bar:baz`
 }
 ```
+
+## Refs
+- [Coursier を使って最速でScalaの開発環境を整える](https://nomadblacky.hatenablog.com/entry/2020/03/22/164815)
