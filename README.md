@@ -2,12 +2,12 @@
 
 ## tl;dr
 
-- coursier(https://get-coursier.io/docs/cli-installation)はScalaのライブラリを取得するためのライブラリ
+- coursier\(https://get-coursier.io/docs/cli-installation\)はScalaのライブラリを取得するためのライブラリ
 - coursierのCLIであるcsコマンドが便利
   - setup コマンドでjava,sbtが一切入っていない状態からscalaの開発環境を用意できる
   - install コマンドでライブラリをサクッとインストールできる
 
-- ammonite(https://ammonite.io/#Ammonite)
+- ammonite\(https://ammonite.io/#Ammonite\)
   - scala でスクリプトを書くためのさまざまなユーティリティを提供している
   - *.sc ファイルにScalaのスクリプトを書いて動かせる
   - VSCode のScala 拡張機能Metals のサポートが効く
