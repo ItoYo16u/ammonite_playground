@@ -97,7 +97,7 @@ amm example.sc debugMain
 
 #### import ivy libs
 
-If you want to import "hoge %% foo % varsion"
+If you want to import ``"hoge %% foo % varsion"``
 Change `%` to `:` like below.
 
 ```main.sc
@@ -107,7 +107,7 @@ import scalaz._
 
 Multiple libraries can be loaded like bellow.
 
-```
+```scala
 import $ivy.{
   `hoge::fuga:piyo`,
   `foo::bar:baz`
