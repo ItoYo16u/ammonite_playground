@@ -1,0 +1,6 @@
+.metals
+.ammonite
+.vscode
+.bloops
+*.log
+.DS_Store
