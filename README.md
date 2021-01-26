@@ -1,4 +1,4 @@
-# ammonite getting started with coursier
+# getting started with coursier & ammonite
 
 ## tl;dr
 
