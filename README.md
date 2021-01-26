@@ -16,6 +16,8 @@
 
 
 ## install coursier
+coursierのインストール
+
 ```shell script
 # install cs(CLI for coursier) locally
 curl -fLo cs https://git.io/coursier-cli-"$(uname | tr LD ld)"
@@ -27,6 +29,7 @@ rm cs # cs locally installed is no longer necessary
 ```
 
 ## install ammonite
+ammoniteのインストール
 ```shell script
 cs install ammonite
 
@@ -36,11 +39,13 @@ amm # enter ammonite Repl
 ## basic usages and commands
 
 ### watch file changes and automatically reload
+ファイルの変更を検知する
 ```shell script
 amm --watch filename.sc
 ```
 
 ### run sc file
+コマンドラインから*.scファイルを実行する
 
 ```hello.sc
 @main
@@ -54,7 +59,8 @@ amm hello.sc
 # => hello ammonite!
 ```
 
-### run sc file with params
+### run sc file with arguments
+コマンドラインから引数を渡す
 ```hello.sc
 @main
 def main(name:String,number:Int) = {
@@ -74,7 +80,7 @@ println("hello ammonite!")
 ```
 
 ### run one of entrypoints annotated with @main
-
+`@main`アノテーションのついたメソッドのうちひとつをコマンドラインから実行する
 ```example.sc
 
 @main
@@ -94,7 +100,7 @@ amm example.sc debugMain
 ```
 
 ### import external libraries
-
+ライブラリをインポートする
 #### import ivy libs
 
 If you want to import ``"hoge %% foo % varsion"``
@@ -112,6 +118,28 @@ import $ivy.{
   `hoge::fuga:piyo`,
   `foo::bar:baz`
 }
+```
+
+### Debug code with ammonite Repl
+
+``amm --predef [file_name].sc`` と呼び出すことで、`[file_name].sc`で定義したメソッドがreplから呼び出せる.
+
+```main.sc
+@main
+def main()= {
+  println("debug from repl!")
+}
+```
+
+```shell script
+amm --predef main.sc
+# Welcome to the Ammonite Repl 2.3.8-32-64308dc3 (Scala 2.13.4 Java 11.0.9.1)
+```
+You can call methods defined in `main.sc` from Repl
+
+```shell script
+main()
+# => debug from repl!
 ```
 
 ## Refs
